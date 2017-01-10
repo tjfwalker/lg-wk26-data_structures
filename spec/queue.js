@@ -13,7 +13,19 @@ describe('Queue', function () {
   })
 
   context('isEmpty()', function () {
+    it('exists', function () {
+      expect(this.queue.isEmpty).to.be.a( 'function' )
+    })
 
+    it('returns true when the queue is empty', function () {
+      expect(this.queue.isEmpty()).to.be.true
+    })
+
+    it('returns false when the queue is not empty', function () {
+      this.queue.enqueue( 'foo' )
+
+      expect(this.queue.isEmpty()).to.be.false
+    })
   })
 
   context('length()', function () {
