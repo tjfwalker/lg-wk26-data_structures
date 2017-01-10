@@ -6,7 +6,8 @@ export default class Queue {
   }
 
   isEmpty() {
-
+    if (this.length() > 0) return false
+    return true
   }
 
   length() {
