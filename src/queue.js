@@ -5,6 +5,10 @@ export default class Queue {
     this.data = []
   }
 
+  isEmpty() {
+
+  }
+
   length() {
     return this.data.length
   }

@@ -12,6 +12,10 @@ describe('Queue', function () {
     this.queue = new Queue
   })
 
+  context('isEmpty()', function () {
+
+  })
+
   context('length()', function () {
     it('exists', function () {
       expect(this.queue.length).to.be.a( 'function' )
