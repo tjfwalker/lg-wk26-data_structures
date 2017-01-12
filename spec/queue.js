@@ -12,6 +12,10 @@ describe('Queue', function () {
     this.queue = new Queue
   })
 
+  context('enqueue()', function () {
+
+  })
+
   context('isEmpty()', function () {
     it('exists', function () {
       expect(this.queue.isEmpty).to.be.a( 'function' )
