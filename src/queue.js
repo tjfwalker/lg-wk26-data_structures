@@ -6,7 +6,7 @@ export default class Queue {
   }
 
   enqueue( element ) {
-
+    this.data.push( element )
   }
 
   isEmpty() {
