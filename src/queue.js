@@ -5,6 +5,10 @@ export default class Queue {
     this.data = []
   }
 
+  enqueue( element ) {
+    this.data.push( element )
+  }
+
   isEmpty() {
     if (this.length() > 0) return false
     return true

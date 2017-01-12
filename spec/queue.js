@@ -12,6 +12,32 @@ describe('Queue', function () {
     this.queue = new Queue
   })
 
+  context('enqueue()', function () {
+    it('exists', function () {
+      expect(this.queue.enqueue).to.be.a( 'function' )
+    })
+
+    it('adds the provided element to the queue', function () {
+      expect(this.queue.length()).to.equal( 0 )
+
+      expect(this.queue.enqueue( 'foo' )).to.satisfy(
+          function () {
+            const queueContents = []
+
+            while ( this.queue.dequeue() !== null ) {
+              queueContents.push( this.queue.dequeue() )
+            }
+
+            return queueContents.includes( 'foo' ) && this.queue.length() === 1
+          }
+      )
+    })
+
+    it('does not output', function () {
+      expect(this.queue.enqueue( 'bar' )).to.be.undefined
+    })
+  })
+
   context('isEmpty()', function () {
     it('exists', function () {
       expect(this.queue.isEmpty).to.be.a( 'function' )
