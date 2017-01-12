@@ -13,7 +13,9 @@ describe('Queue', function () {
   })
 
   context('enqueue()', function () {
-
+    it('exists', function () {
+      expect(this.queue.enqueue).to.be.a( 'function' )
+    })
   })
 
   context('isEmpty()', function () {
