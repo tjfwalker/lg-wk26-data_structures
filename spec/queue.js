@@ -32,6 +32,10 @@ describe('Queue', function () {
           }
       )
     })
+
+    it('does not output', function () {
+      expect(this.queue.enqueue( 'bar' )).to.be.undefined
+    })
   })
 
   context('isEmpty()', function () {
